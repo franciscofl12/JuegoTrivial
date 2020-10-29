@@ -667,9 +667,9 @@ public class Main {
 			// Septima pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Septima pregunta :\n"
-						+ "¿La Placa Base sirve para conectar todas las partes internas de un computador\n"
-						+ "(1) : Verdadero\n" + "(2) : Falso\n");
+				System.out.println("Septima pregunta :\n" + "Qué es el software de aplicación\n"
+						+ "(1) : Le dice al computador como realizar tareas especificas para el usuario.\n"
+						+ "(2) :  Le dice al computador como manejar los programas.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -694,10 +694,10 @@ public class Main {
 			// Octava pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Octava pregunta :\n" + "Podemos definir el procesador de un como:\n"
-						+ "(1) : El circuito mas pequeño del computador\n"
-						+ "(2) : El controlador del video de nuestro equipo\n"
-						+ "(3) : El que mide el rendimiento del pc\n" + "(4) : El cerebro del computador\n");
+				System.out.println("Octava pregunta :\n"
+						+ "   A la categoría de software de sistema pertenecen los programas de:\n"
+						+ "(1) : Sistema matematico.\n" + "(2) : Sistema comunicativo.\n"
+						+ "(3) : Sistema aplicativo.\n" + "(4) : Sistema operativo.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
