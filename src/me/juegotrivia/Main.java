@@ -11,18 +11,10 @@ public class Main {
 	}
 
 	public static void inicioTrivial() {
-		System.out.println("                                            .---. \r\n"
-				+ "                 .--..----.     .----.       |   | \r\n"
-				+ "                 |__| \\    \\   /    /        |   | \r\n"
-				+ "     .|  .-,.--. .--.  '   '. /'   /         |   | \r\n"
-				+ "   .' |_ |  .-. ||  |  |    |'    /    __    |   | \r\n"
-				+ " .'     || |  | ||  |  |    ||    | .:--.'.  |   | \r\n"
-				+ "'--.  .-'| |  | ||  |  '.   `'   .'/ |   \\ | |   | \r\n"
-				+ "   |  |  | |  '- |  |   \\        / `\" __ | | |   | \r\n"
-				+ "   |  |  | |     |__|    \\      /   .'.''| | |   | \r\n"
-				+ "   |  '.'| |              '----'   / /   | |_'---' \r\n"
-				+ "   |   / |_|                       \\ \\._,\\ '/      \r\n"
-				+ "   `'-'                             `--'  `\"       " + "Creado por franciscofl12.\n\n"
+		System.out.println(" _____      _       _       _ \r\n" + "/__   \\_ __(_)_   _(_) __ _| |\r\n"
+				+ "  / /\\/ '__| \\ \\ / / |/ _` | |\r\n" + " / /  | |  | |\\ V /| | (_| | |\r\n"
+				+ " \\/   |_|  |_| \\_/ |_|\\__,_|_|\r\n" + "                              "
+				+ "Creado por franciscofl12.\n\n"
 				+ "Bienvenido al juego trivial, selecciona un numero para empezar el programa.");
 		menu();
 	}
@@ -1153,11 +1145,9 @@ public class Main {
 			// Decima pregunta de futbol
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Decima pregunta :\n" + " Mayor goleador del Real Madrid.\n"
-						+ "(1) : Cristiano Ronaldo\n"
-						+ "(2) : Benzema\n"
-						+ "(3) : Raul Gonzalez\n"
-						+ "(4) : Sergio Ramos\n");
+				System.out.println(
+						"Decima pregunta :\n" + " Mayor goleador del Real Madrid.\n" + "(1) : Cristiano Ronaldo\n"
+								+ "(2) : Benzema\n" + "(3) : Raul Gonzalez\n" + "(4) : Sergio Ramos\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -1198,8 +1188,8 @@ public class Main {
 		if (intentos == 0) {
 			System.out.println("No has respondido todavia ninguna pregunta");
 		} else {
-			System.out.println(
-					"Analizando preguntas respondidas...\n\n" + "Preguntas respondidas = " + puntuaje + "/" + intentos);
+			System.out.println("Analizando preguntas respondidas...\n\n" + "Preguntas respondidas = " + intentos + "/"
+					+ 30 + "Preguntas acertadas = " + puntuaje);
 		}
 		menu();
 	}
