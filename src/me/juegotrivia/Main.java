@@ -453,7 +453,7 @@ public class Main {
 			while (confirmacion == false) {
 				confirmacion = false;
 				System.out.println("Primera pregunta :\n" + "¿Que sistema operativo es mas antiguo?\n"
-						+ "(1) : Windows Vista\n" + "(2) : Windpws XP\n");
+						+ "(1) : Windows Vista\n" + "(2) : Windows XP\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -734,9 +734,8 @@ public class Main {
 			// Novena pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Novena pregunta :\n" + "¿Que significa CPU?\n" + "(1) : Comida para umanos\n"
-						+ "(2) : Control para usuarios\n" + "(3) : Unidad Central de Proceso\n"
-						+ "(4) : Cambio por unidades\n");
+				System.out.println("Novena pregunta :\n" + "Son dibujos que representan los recursos del computador\n"
+						+ "(1) : Imagen\n" + "(2) : Ventanas\n" + "(3) : Iconos\n" + "(4) : Unidades\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -749,7 +748,6 @@ public class Main {
 					if (respuesta == 2) {
 						confirmacion = true;
 						System.out.println("Ha seleccionado la respuesta 2");
-
 						intentos = intentos + 1;
 					} else {
 						if (respuesta == 3) {
@@ -774,11 +772,11 @@ public class Main {
 			// Decima pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Decima pregunta :\n" + " ¿Qué es la BIOS?\n"
-						+ "(1) : Programa que mantiene cierta información básica en el arranque de la computadora\n"
-						+ "(2) : Es el cerebro que se encarga de controlar todo el sistema\n"
-						+ "(3) : Donde se almacenan los datos\n"
-						+ "(4) : Donde se conectan todos los componentes del ordenador\n");
+				System.out.println("Decima pregunta :\n" + " ¿Qué significa 'Solicitudes de Interrupción'?\n"
+						+ "(1) : Es una señal enviada por el sistema operativo a la CPU, solicitando tiempo de procesamiento para una tarea específica\n"
+						+ "(2) : Es la muestra enviada por el sistema informático para solicitar el tiempo de descarga.\n"
+						+ "(3) : Es donde se almacenan los datos\n"
+						+ "(4) : Es la señal enviada por la memoria principal para solicitar los dispositivos de entrada.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
