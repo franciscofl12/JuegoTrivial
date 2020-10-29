@@ -442,7 +442,7 @@ public class Main {
 		}
 		Utils.borrarConsola();
 	}
-	
+
 	public static void software() {
 		boolean confirmacion = false;
 
@@ -452,8 +452,8 @@ public class Main {
 			// Primera pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Primera pregunta :\n" + "¿Es verdad que los RGB te dan mas FPS?\n"
-						+ "(1) : Verdadero\n" + "(2) : Falso\n");
+				System.out.println("Primera pregunta :\n" + "¿Que sistema operativo es mas antiguo?\n"
+						+ "(1) : Windows Vista\n" + "(2) : Windpws XP\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -479,8 +479,11 @@ public class Main {
 			// Segunda pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Segunda pregunta :\n" + "¿Que SSD es mas rapido?\n" + "(1) : IDE\n" + "(2) : Sata\n"
-						+ "(3) : m.2\n" + "(4) : Nvme\n");
+				System.out.println("Segunda pregunta :\n" + "¿Qué es el software?\n"
+						+ "(1) : Es el conjunto de instrucciones electrónicas que le dicen al hardware lo que debe hacer.\n"
+						+ "(2) : Conjunto de elementos físicos o materiales que constituyen una computadora o un sistema informático.\n"
+						+ "(3) :  Memoria principal de la computadora, donde residen programas y datos, sobre la que se pueden efectuar operaciones de lectura y escritura\n"
+						+ "(4) :  Área de almacenamiento dedicada a los datos usados o solicitados con más frecuencias para su recuperación a gran velocidad.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -489,6 +492,7 @@ public class Main {
 					confirmacion = true;
 					System.out.println("Ha seleccionado la respuesta 1");
 					intentos = intentos + 1;
+					software = software + 1;
 				} else {
 					if (respuesta == 2) {
 						confirmacion = true;
@@ -503,7 +507,6 @@ public class Main {
 							if (respuesta == 4) {
 								confirmacion = true;
 								System.out.println("Ha seleccionado la respuesta 4");
-								software = software + 1;
 								intentos = intentos + 1;
 							} else {
 								System.out.println("Seleccione una respuesta valida");
@@ -517,7 +520,7 @@ public class Main {
 			// Tercera pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Tercera pregunta :\n" + "¿Que tipo de RAM es mas rapido?\n" + "(1) : DRR4\n"
+				System.out.println("Tercera pregunta :\n" + "¿Cuál es el primer paso para ejecutar un programa?\n" + "(1) : DRR4\n"
 						+ "(2) : Estatica\n" + "(3) : DRR5\n" + "(4) : SDRR4\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
@@ -807,4 +810,3 @@ public class Main {
 		Utils.borrarConsola();
 	}
 }
-
