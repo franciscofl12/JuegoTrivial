@@ -11,15 +11,18 @@ public class Main {
 	}
 
 	public static void inicioTrivial() {
-		System.out.println("            # _  .-')   #   ('-.     #     .-') _  #\r\n"
-				+ "            #( \\( -O )  #  ( OO ).-. #    ( OO ) ) #\r\n"
-				+ "   ,------. # ,------.  #  / . --. / #,--./ ,--,'  #\r\n"
-				+ "('-| _.---' # |   /`. ' #  | \\-.  \\  #|   \\ |  |\\  #\r\n"
-				+ "(OO|(_\\     # |  /  | | #.-'-'  |  | #|    \\|  | ) #\r\n"
-				+ "/  |  '--.  # |  |_.' | # \\| |_.'  | #|  .     |/  #\r\n"
-				+ "\\_)|  .--'  # |  .  '.' #  |  .-.  | #|  |\\    |   #\r\n"
-				+ "  \\|  |_)   # |  |\\  \\  #  |  | |  | #|  | \\   |   #\r\n"
-				+ "   `--'     ## `--' '--' ##  `--' `--' ##`--'  `--'   ##\n\n"
+		System.out.println("                                            .---. \r\n"
+				+ "                 .--..----.     .----.       |   | \r\n"
+				+ "                 |__| \\    \\   /    /        |   | \r\n"
+				+ "     .|  .-,.--. .--.  '   '. /'   /         |   | \r\n"
+				+ "   .' |_ |  .-. ||  |  |    |'    /    __    |   | \r\n"
+				+ " .'     || |  | ||  |  |    ||    | .:--.'.  |   | \r\n"
+				+ "'--.  .-'| |  | ||  |  '.   `'   .'/ |   \\ | |   | \r\n"
+				+ "   |  |  | |  '- |  |   \\        / `\" __ | | |   | \r\n"
+				+ "   |  |  | |     |__|    \\      /   .'.''| | |   | \r\n"
+				+ "   |  '.'| |              '----'   / /   | |_'---' \r\n"
+				+ "   |   / |_|                       \\ \\._,\\ '/      \r\n"
+				+ "   `'-'                             `--'  `\"       " + "Creado por franciscofl12.\n\n"
 				+ "Bienvenido al juego trivial, selecciona un numero para empezar el programa.");
 		menu();
 	}
@@ -41,7 +44,7 @@ public class Main {
 			} else {
 				if (seleccionmenu == 2) {
 					menu = true;
-
+					contador();
 				} else {
 					if (seleccionmenu == 0) {
 						menu = true;
@@ -54,7 +57,7 @@ public class Main {
 
 	public static void juego() {
 
-		System.out.println("El juego va a comenzar.\n\n" + "1. software PC\n" + "2. Software PC\n" + "3. Futbol\n");
+		System.out.println("El juego va a comenzar.\n\n" + "1. Hardware PC\n" + "2. Software PC\n" + "3. Futbol\n");
 
 		String seleccion = JOptionPane.showInputDialog("Selecciona una tematica.");
 		int seleccionum = Integer.parseInt(seleccion);
@@ -66,6 +69,7 @@ public class Main {
 				software();
 			} else {
 				if (seleccionum == 3) {
+					futbol();
 				} else {
 					juego();
 				}
@@ -81,6 +85,13 @@ public class Main {
 
 	public static void hardware() {
 		boolean confirmacion = false;
+
+		System.out.println("                     _                        \r\n"
+				+ "  /\\  /\\__ _ _ __ __| |_      ____ _ _ __ ___ \r\n"
+				+ " / /_/ / _` | '__/ _` \\ \\ /\\ / / _` | '__/ _ \\\r\n"
+				+ "/ __  / (_| | | | (_| |\\ V  V / (_| | | |  __/\r\n"
+				+ "\\/ /_/ \\__,_|_|  \\__,_| \\_/\\_/ \\__,_|_|  \\___|\r\n"
+				+ "                                              ");
 
 		if (hardware > 0) {
 			System.out.println("Ya has intentado una vez esta tematica. No puedes realizarlo ninguna vez mas.");
@@ -441,10 +452,17 @@ public class Main {
 			}
 		}
 		Utils.borrarConsola();
+		menu();
 	}
 
 	public static void software() {
 		boolean confirmacion = false;
+
+		System.out.println(" __        __ _                          \r\n"
+				+ "/ _\\ ___  / _| |___      ____ _ _ __ ___ \r\n"
+				+ "\\ \\ / _ \\| |_| __\\ \\ /\\ / / _` | '__/ _ \\\r\n"
+				+ "_\\ \\ (_) |  _| |_ \\ V  V / (_| | | |  __/\r\n"
+				+ "\\__/\\___/|_|  \\__| \\_/\\_/ \\__,_|_|  \\___|\r\n" + "                                         ");
 
 		if (software > 0) {
 			System.out.println("Ya has intentado una vez esta tematica. No puedes realizarlo ninguna vez mas.");
@@ -810,5 +828,379 @@ public class Main {
 			}
 		}
 		Utils.borrarConsola();
+		menu();
+	}
+
+	public static void futbol() {
+		boolean confirmacion = false;
+
+		System.out.println("   ___      _   _           _ \r\n" + "  / __\\   _| |_| |__   ___ | |\r\n"
+				+ " / _\\| | | | __| '_ \\ / _ \\| |\r\n" + "/ /  | |_| | |_| |_) | (_) | |\r\n"
+				+ "\\/    \\__,_|\\__|_.__/ \\___/|_|\r\n" + "                              ");
+
+		if (futbol > 0) {
+			System.out.println("Ya has intentado una vez esta tematica. No puedes realizarlo ninguna vez mas.");
+		} else {
+			// Primera pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Primera pregunta :\n" + "¿Que significa FC?\n" + "(1) : Futbol Club\n"
+						+ "(2) : Federacion Club\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						System.out.println("Seleccione una respuesta valida");
+					}
+				}
+			}
+
+			confirmacion = false;
+
+			// Segunda pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Segunda pregunta :\n" + "¿Quien tiene mas balones de oro?\n"
+						+ "(1) : Cristiano Ronaldo empatado con Lionel Messi.\n" + "(2) : Cristiano Ronaldo.\n"
+						+ "(3) : Lionel Messi.\n" + "(4) : Pele.\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Tercera pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Tercera pregunta :\n" + "¿Como se llama la liga espanola?\n" + "(1) : Liga BBVA.\n"
+						+ "(2) : Liga espanola.\n" + "(3) : Liga Santander.\n" + "(4) : La liga.\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+								futbol = futbol + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Cuarta pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Cuarta pregunta :\n" + "¿Cuanto dura un partido de futbol?\n" + "(1) : 90 minutos\n"
+						+ "(2) : 110 minutos\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						futbol = futbol + 1;
+						intentos = intentos + 1;
+					} else {
+						System.out.println("Seleccione una respuesta valida");
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Quinta pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Quinta pregunta :\n" + "¿Que es el futbol?\n" + "(1) : Un deporte\n"
+						+ "(2) : Una adiccion\n" + "(3) : Una mierda\n" + "(4) : Un tipo de arbol\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Sexta pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Sexta pregunta :\n" + "Un tipo de falta es:\n" + "(1) : Fuera de juego.\n"
+						+ "(2) : Meter un gol.\n" + "(3) : Darle con la cabeza al balon.\n" + "(4) : Correr.\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Septima pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println(
+						"Septima pregunta :\n" + "Cuantos arbitros hay en un partido?\n" + "(1) : 4\n" + "(2) : 3\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						System.out.println("Seleccione una respuesta valida");
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Octava pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out
+						.println("Octava pregunta :\n" + "Con cuantos anios se puede jugar profesionalmente a futbol:\n"
+								+ "(1) : 17.\n" + "(2) : 15.\n" + "(3) : 18.\n" + "(4) : 16.\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+								futbol = futbol + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Novena pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Novena pregunta :\n" + "Cuantos jugadores juegan un partido de futbol\n"
+						+ "(1) : 11\n" + "(2) : 20\n" + "(3) : 22\n" + "(4) : 23\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							futbol = futbol + 1;
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+			confirmacion = false;
+
+			// Decima pregunta de futbol
+			while (confirmacion == false) {
+				confirmacion = false;
+				System.out.println("Decima pregunta :\n" + " Mayor goleador del Real Madrid.\n"
+						+ "(1) : Cristiano Ronaldo\n"
+						+ "(2) : Benzema\n"
+						+ "(3) : Raul Gonzalez\n"
+						+ "(4) : Sergio Ramos\n");
+
+				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
+				int respuesta = Integer.parseInt(respuestas);
+
+				if (respuesta == 1) {
+					confirmacion = true;
+					System.out.println("Ha seleccionado la respuesta 1");
+					intentos = intentos + 1;
+					futbol = futbol + 1;
+				} else {
+					if (respuesta == 2) {
+						confirmacion = true;
+						System.out.println("Ha seleccionado la respuesta 2");
+						intentos = intentos + 1;
+					} else {
+						if (respuesta == 3) {
+							confirmacion = true;
+							System.out.println("Ha seleccionado la respuesta 3");
+							intentos = intentos + 1;
+						} else {
+							if (respuesta == 4) {
+								confirmacion = true;
+								System.out.println("Ha seleccionado la respuesta 4");
+								intentos = intentos + 1;
+							} else {
+								System.out.println("Seleccione una respuesta valida");
+							}
+						}
+					}
+				}
+			}
+		}
+		Utils.borrarConsola();
+		menu();
+	}
+
+	public static void contador() {
+		if (intentos == 0) {
+			System.out.println("No has respondido todavia ninguna pregunta");
+		} else {
+			System.out.println(
+					"Analizando preguntas respondidas...\n\n" + "Preguntas respondidas = " + puntuaje + "/" + intentos);
+		}
+		menu();
 	}
 }
