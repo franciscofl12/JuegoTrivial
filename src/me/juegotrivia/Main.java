@@ -520,8 +520,10 @@ public class Main {
 			// Tercera pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Tercera pregunta :\n" + "¿Cuál es el primer paso para ejecutar un programa?\n" + "(1) : DRR4\n"
-						+ "(2) : Estatica\n" + "(3) : DRR5\n" + "(4) : SDRR4\n");
+				System.out.println("Tercera pregunta :\n" + "¿Cuál es el primer paso para ejecutar un programa?\n"
+						+ "(1) :  Guardarlo en la memoria USB.\n"
+						+ "(2) :  Archivarlo en el dispositivo de almacenamiento.\n" + "(3) : Guardarlo en la CPU.\n"
+						+ "(4) : Guardarlo en la RAM.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -534,7 +536,6 @@ public class Main {
 					if (respuesta == 2) {
 						confirmacion = true;
 						System.out.println("Ha seleccionado la respuesta 2");
-						software = software + 1;
 						intentos = intentos + 1;
 					} else {
 						if (respuesta == 3) {
@@ -546,6 +547,7 @@ public class Main {
 								confirmacion = true;
 								System.out.println("Ha seleccionado la respuesta 4");
 								intentos = intentos + 1;
+								software = software + 1;
 							} else {
 								System.out.println("Seleccione una respuesta valida");
 							}
@@ -558,8 +560,9 @@ public class Main {
 			// Cuarta pregunta de software
 			while (confirmacion == false) {
 				confirmacion = false;
-				System.out.println("Cuarta pregunta :\n" + "¿Que tipo de CPU tengo si tengo un Ryzen 9 3900X?\n"
-						+ "(1) : LGA\n" + "(2) : PGA\n");
+				System.out.println("Cuarta pregunta :\n"
+						+ "¿Cuáles son las dos categorías en las que se divide el software?\n"
+						+ "(1) : Software de sistemas y comunicacion\n" + "(2) : Software de sistemas y aplicacion\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -625,8 +628,9 @@ public class Main {
 			while (confirmacion == false) {
 				confirmacion = false;
 				System.out.println("Sexta pregunta :\n"
-						+ "¿En cual componente del computador se guarda la información de manera permanente?\n"
-						+ "(1) : RAM\n" + "(2) : CPU\n" + "(3) : La nube\n" + "(4) : Disco Duro\n");
+						+ "Es la categoría del programa software que le dice al computador como usar sus propios componentes.\n"
+						+ "(1) : Software de comunicación.\n" + "(2) : Software de sistema.\n"
+						+ "(3) : Software de aplicacion.\n" + "(4) : Software de programa.\n");
 
 				String respuestas = JOptionPane.showInputDialog("Introduzca su respuesta: ");
 				int respuesta = Integer.parseInt(respuestas);
@@ -640,6 +644,7 @@ public class Main {
 						confirmacion = true;
 						System.out.println("Ha seleccionado la respuesta 2");
 						intentos = intentos + 1;
+						software = software + 1;
 					} else {
 						if (respuesta == 3) {
 							confirmacion = true;
@@ -650,7 +655,6 @@ public class Main {
 								confirmacion = true;
 								System.out.println("Ha seleccionado la respuesta 4");
 								intentos = intentos + 1;
-								software = software + 1;
 							} else {
 								System.out.println("Seleccione una respuesta valida");
 							}
